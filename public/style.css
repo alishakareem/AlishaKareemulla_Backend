@@ -1,0 +1,334 @@
+.container{
+    font-weight: 800;
+    font-size: 1em;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 1.5fr 2fr 2fr 2fr;
+    grid-template-rows: 0.2fr 1.5fr 1.5fr 1.5fr
+                        1.5fr 1.5fr 1.5fr 1.5fr
+                        1.5fr 1.5fr 1.5fr 0.8fr;
+    grid-template-areas: 
+    "dp main-name main-name main-name"
+    "nav nav nav nav"
+    "main main edu edu"
+    "proj proj proj proj"
+    "exp exp exp exp"
+    "skill skill skill skill"
+    "blog blog blog blog"
+    "b1 b2 b3 b4"
+    "footer footer footer footer"
+    "f1 f2 f3 f4";
+}
+
+/* Common properties */
+
+.navbar a,#p1,#ul2,#s2{
+    color:  crimson;
+}
+
+main,#s1,#edu,#proj,#exp,#skill,#blog,footer{
+    color: #910101;
+}
+
+html,main,#edu,#blog{
+    background: rgb(255,240,245);
+}
+
+#skill,#proj{
+    background-color: rgb(255,228,225);
+}
+
+nav,#main-name,#dp,footer,#f1,#f2,#f3,#f4{
+    background-image: url("./images/header.jpg");
+}
+
+/* navigation bar */
+
+nav{
+    grid-area: nav;
+    justify-content:center;
+    overflow: hidden; 
+   height: 63px;
+   display: flex;
+}
+
+.navbar a{
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    margin-left: 40px;
+    text-decoration: none;
+    padding: 14px 28px;
+}
+
+#navid  a:hover {
+    color:blue;
+}
+
+#navid .icon {
+    display:none;
+}
+
+/* name */
+
+#main-name{
+    grid-area: main-name;
+    font-size: 45px;
+    color:brown;
+    padding-top:40px;
+    background-size: cover;
+    width: 100%;
+    display:block;
+}
+
+/* profile picture */
+
+#dp, #profile{
+    float:left; 
+    height: 140px;
+}
+
+#dp {  
+    grid-area: dp;
+    width:338px;  
+}
+
+#profile{
+    width:120px;
+}
+
+
+/* About section */
+
+main{
+    grid-area: main;
+    padding: 5px;
+    width: 100%;
+    float: left;
+    padding-left: 35px;
+    padding-top: 20px;  
+}
+
+#p1{
+    font-size: 18px;
+    padding-right: 50px;
+    width: auto;
+}
+
+/* Education */
+
+#s1{
+     font-weight: bold;
+}
+
+#edu{
+    grid-area: edu;
+    padding-left: 35px;
+    padding-top: 20px;
+} 
+
+/* Projects */
+
+#proj{
+    grid-area:proj;
+    margin: 0px;
+    padding: 15px;
+    padding-top: 10px;
+    padding-left: 35px;
+}
+
+#ul1{
+    font-size: 20px;
+    padding-left: 85px;
+}
+
+/* Experience */
+
+#exp{
+    grid-area: exp;
+    padding: 15px;
+    padding-top: 10px;
+    padding-left: 35px;
+    background-image: url("./images/back.jpg");    
+}
+
+/* skills */
+
+#skill{
+    grid-area: skill;
+    
+    padding: 15px;
+    padding-top: 10px;
+    padding-left: 35px;
+}
+
+#ul2{
+    font-size: 18px;
+    padding-right: 150px;
+    padding-left: 85px;
+}
+
+/* Blog */
+
+#blog{
+    grid-area: blog;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+#b1{
+    grid-area: b1;
+}
+
+#b2{
+    grid-area: b2;
+}
+
+#b3{
+    grid-area: b3;
+}
+
+#b4{
+    grid-area: b4;
+}
+
+.bg{
+    width:1em;
+    height:350px;
+    width:85%;
+}
+
+#b1,#b2,#b3,#b4{
+    flex: 1%;
+    height:350px;
+    padding-left: 50px;
+    padding-right: 25px;
+    padding-bottom: 40px;
+}
+
+/* Footer */
+
+footer{
+    grid-area: footer;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-left: 35px;
+    height: max-content;
+}
+
+#s2{
+    font-size: 20px;
+}
+
+.icon{
+    width:20px;
+    height:20px; 
+}
+
+#f1{
+    grid-area: f1;
+}
+#f2{
+    grid-area: f2;
+}
+#f3{
+    grid-area: f3;
+}
+#f4{
+    grid-area: f4;
+}
+
+#f1,#f2,#f3,#f4{
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-bottom: 30px;
+}
+
+
+/* For responsive menu */
+@media only screen and (max-width: 500px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.9fr  1.2fr 1.2fr 1.2fr
+                            1.2fr 1.2fr 1.2fr 1.2fr
+                            1.2fr 1.2fr 1.2fr 1.2fr
+                            1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+        grid-template-areas:
+        "nav" "main-name" "dp" "main" "edu"
+        "proj" "exp" "skill" "blog"
+        "b1" "b2" "b3" "b4"
+        "footer" "f1" "f2" "f3" "f4";
+    }
+
+    /* Navigation bar */
+
+    nav .blog-bg{
+        display: none;
+    }
+
+    nav{
+        display: inline;
+    }
+
+    #navid .icon{
+        display:flex;
+        position: relative;
+    }
+
+    .navbar a.icon{
+        float:right;
+        display:block;
+    }
+
+    .navbar.responsivemenu{
+        position: relative;
+        height: 350px;
+    }
+       
+    .navbar.responsivemenu a.icon {
+        position: absolute;
+    }
+
+    .navbar.responsivemenu a {
+        float: none;
+        display: block;
+        text-align: center;
+        padding-top: 2%;
+        line-height: 20px;
+    }
+
+    /* name */
+
+    #main-name{
+        padding: 30px 30px 10px 80px;
+        width: fit-content;
+    }
+
+    /* Profile pic */
+    #dp,#profile{
+        width: auto;
+        height: 420px;
+        padding-left: 12px;
+        background: rgb(255,240,245);
+        padding-top: 5px;
+    }
+
+    /* Education */
+    #edu,#exp{
+        background-image: url("./images/back.jpg"); 
+        background-size: cover;
+    }
+
+    #ul1,#ul2{
+        padding-left: 2em;
+        padding-right: 10px;
+    }
+
+    /* About */
+    main{
+        height: auto;
+        width:auto;
+       line-height: 1.5em;
+    }
+}
